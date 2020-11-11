@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { Table, Button, Modal, Divider, Popconfirm, Form, Input, message } from 'antd';
+import { FormInstance } from 'antd/lib/form';
 import _ from 'lodash';
 import './App.css';
-import userData  from './users.json';
+// import userData  from './users.json';
 
 const { Search } = Input;
 function App(props) {
   return (
     <div style={{padding:40}}>
+        <div style={{marginBottom:20}}>
+          <Button><a href='https://github.com/zzhang18/booking'>GitHub</a></Button>
+        </div>
         <div style={{marginBottom:20}}>
           <Button type="primary" style={{marginRight:10}} onClick={() => props.show()}>Add user</Button>
           <Search
@@ -53,24 +57,17 @@ function App(props) {
 class EditModalWrapper extends React.Component {
 
   save = async (e) => {
-    e.preventDefault();
-    const form = this.props.form;
-    // form.validateFields(async (err, values) => {
-    //   if (err) return;
-
-    //   this.props.edit(values);
-    //   form.resetFields();
-    // });this.props.edit(values);
     this.props.edit();
-    
     this.setState({ visible: false});
   };
 
   cancelModal = async () => {
-    // this.props.form.resetFields();
     this.props.onCancel();
   };
 
+  onFinish = values => {
+    console.log('Received values of form: ', values);
+  };
 
   render() {
     const { visible, form, title, target } = this.props;
@@ -82,10 +79,7 @@ class EditModalWrapper extends React.Component {
 					onOk={this.save}
 					onCancel={this.cancelModal}
         >
-          <Form
-						labelCol={{ span: 4 }}
-						wrapperCol={{ span: 20 }}
-					>
+          <Form initialValues={{ name: target ?target.name : null, mobile:target ?target.mobile : null }} >
             <Form.Item name='name' label="Name">
               <Input />
             </Form.Item>
@@ -98,7 +92,6 @@ class EditModalWrapper extends React.Component {
     );
   }
 }
-
 
 let hoc = (WrappedComponent) => {
   return class EnhancedComponent extends Component {
@@ -113,17 +106,29 @@ let hoc = (WrappedComponent) => {
 		}
 
 		async componentDidMount() {
-      let users = userData.users;
-      console.log('users', users);
+      await this.fetchUsers();
+    }
+
+    async fetchUsers() {
+      let users = _.times(10,index=> { 
+        return {
+          "name": 'user' + index,
+          "mobile": 'mobile' + index
+          };
+        }
+      );
       this.setState({users});
     }
 
     async search(value) {
-      console.log('seaerching value',value);
-      let users = userData.user;
-      users = _.filter(users, {'name':value});
-      console.log('filter users',users);
-      this.setState({users});
+      let users = _.times(10,index=> { 
+        return {
+          "name": 'user' + index,
+          "mobile": 'mobile' + index
+          };
+        }
+      );
+      this.setState({users: value ? _.filter(users, {'name':value}) : users});
     }
 
     async show(user) {
@@ -141,8 +146,6 @@ let hoc = (WrappedComponent) => {
     async delete(user) {
       message.success('deleted');
     }
-
-      
 
 		render() {
 			return <WrappedComponent 
