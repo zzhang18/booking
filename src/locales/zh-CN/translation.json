@@ -1,0 +1,17 @@
+{
+  "thisLang": "zh-cn",
+  "thisLanguageMomentCode": "zh-cn",
+  "targetLang":"中文",
+  "targetLangCode":"en-us",
+  "user":"User",
+  "addUser":"Add user",
+  "editUser":"Edit user",
+  "name":"Name",
+  "mobile":"Mobile",
+  "email":"Email",
+  "actions":"Actions",
+  "confrim":"Confrim",
+  "cancel":"Cancel",
+  "modify":"Modify",
+  "delete":"Delete"
+}

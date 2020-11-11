@@ -1,0 +1,17 @@
+{
+  "thisLang": "en-us",
+  "thisLanguageMomentCode": "en-us",
+  "targetLang":"English",
+  "targetLangCode":"zh-cn",
+  "user":"用户",
+  "addUser":"添加用户",
+  "editUser":"编辑用户",
+  "name":"姓名",
+  "mobile":"手机",
+  "email":"邮箱",
+  "actions":"操作",
+  "confirm":"确认",
+  "cancel":"取消",
+  "modify":"编辑",
+  "delete":"删除"
+}
