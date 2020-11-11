@@ -3,7 +3,7 @@ import { Table, Button, Modal, Divider, Popconfirm, Form, Input, message } from 
 import { FormInstance } from 'antd/lib/form';
 import _ from 'lodash';
 import './App.css';
-// import userData  from './users.json';
+import userData  from './users.json';
 
 const { Search } = Input;
 function App(props) {
