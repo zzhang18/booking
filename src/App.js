@@ -55,6 +55,7 @@ function App(props) {
 
 
 class EditModalWrapper extends React.Component {
+  formRef = React.createRef();
 
   save = async (e) => {
     this.props.edit();
@@ -62,6 +63,7 @@ class EditModalWrapper extends React.Component {
   };
 
   cancelModal = async () => {
+    this.formRef.current.resetFields();
     this.props.onCancel();
   };
 
@@ -79,7 +81,7 @@ class EditModalWrapper extends React.Component {
 					onOk={this.save}
 					onCancel={this.cancelModal}
         >
-          <Form initialValues={{ name: target ?target.name : null, mobile:target ?target.mobile : null }} >
+          <Form ref={this.formRef} initialValues={{ name: target ?target.name : null, mobile:target ?target.mobile : null }} >
             <Form.Item name='name' label="Name">
               <Input />
             </Form.Item>
