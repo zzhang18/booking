@@ -62,7 +62,7 @@ function User(props) {
         target={props.user}
       />
       
-      <h3 style={{float:'right'}}>v.0.1.4</h3>
+      <h3 style={{float:'right'}}>v.0.1.7</h3>
     </div>
   );
 }
