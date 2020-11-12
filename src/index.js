@@ -1,11 +1,11 @@
+import "react-app-polyfill/ie11";
+import "react-app-polyfill/stable";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './i18n';
-import "react-app-polyfill/ie11";
-import "react-app-polyfill/stable";
 
 ReactDOM.render(
   <App />
