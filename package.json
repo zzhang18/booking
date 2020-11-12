@@ -11,6 +11,7 @@
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-xhr-backend": "^3.2.2",
     "react": "^17.0.1",
+    "react-app-polyfill": "^2.0.0",
     "react-dom": "^17.0.1",
     "react-i18next": "^11.7.3",
     "react-scripts": "4.0.0",
@@ -36,7 +37,6 @@
       "not dead",
       "not op_mini all",
       "IE 11"
-
     ],
     "development": [
       "last 1 chrome version",
