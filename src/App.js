@@ -10,6 +10,8 @@ import enUS from 'antd/es/locale/en_US';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 import 'moment/locale/en-gb';
+require('es6-promise/auto');
+
 
 function App(props) {
   return (

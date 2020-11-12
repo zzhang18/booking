@@ -13,5 +13,6 @@
   "confirm":"确认",
   "cancel":"取消",
   "modify":"编辑",
-  "delete":"删除"
+  "delete":"删除",
+  "confirmToDelete":"确认删除？"
 }

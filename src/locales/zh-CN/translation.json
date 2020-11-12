@@ -13,5 +13,6 @@
   "confrim":"Confrim",
   "cancel":"Cancel",
   "modify":"Modify",
-  "delete":"Delete"
+  "delete":"Delete",
+  "confirmToDelete":"Confirm to delete?"
 }
