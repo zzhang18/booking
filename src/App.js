@@ -9,8 +9,8 @@ import enUS from 'antd/es/locale/en_US';
 // import 'moment/locale/en-gb';
 //import "@babel/polyfill";
 // import 'core-js';
-import "regenerator-runtime/runtime.js";
-require('es6-promise/auto');
+// import "regenerator-runtime/runtime.js";
+// require('es6-promise/auto');
 
 
 function App(props) {

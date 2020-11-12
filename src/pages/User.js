@@ -62,12 +62,10 @@ function User(props) {
         target={props.user}
       />
       
-      <h3 style={{float:'right'}}>v.0.1.1</h3>
+      <h3 style={{float:'right'}}>v.0.1.3</h3>
     </div>
   );
 }
-
-
 
 // use myRef.current to access it
 
