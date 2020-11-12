@@ -11,7 +11,10 @@ function User(props) {
   return (
     <div style={{ padding: 40 }}>
       <div style={{ marginBottom: 20 }}>
-        <div><h1>{t('user')}</h1></div>
+        <div style={{ display: 'felx', flexDirection: 'row' }}>
+          <h1>{t('user')}</h1>
+          <h3>v.0.1</h3>
+        </div>
         <div style={{ float: 'left' }}>
           <Button type="primary" style={{ margin: '0 10px 10px 0' }} onClick={() => props.show()}>{t('addUser')}</Button>
           <Search

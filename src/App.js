@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import { ConfigProvider } from 'antd';
-import _ from 'lodash';
 import './App.css';
 import User from './pages/User';
-import i18n from './i18n';
-import { useTranslation, withTranslation } from 'react-i18next';
 import zhCN from 'antd/es/locale/zh_CN';
 import enUS from 'antd/es/locale/en_US';
-import moment from 'moment';
-import 'moment/locale/zh-cn';
-import 'moment/locale/en-gb';
-import "@babel/polyfill"
+// import moment from 'moment';
+// import 'moment/locale/zh-cn';
+// import 'moment/locale/en-gb';
+// import "@babel/polyfill";
+import "regenerator-runtime/runtime.js";
 require('es6-promise/auto');
 
 
