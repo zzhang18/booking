@@ -7,7 +7,8 @@ import enUS from 'antd/es/locale/en_US';
 // import moment from 'moment';
 // import 'moment/locale/zh-cn';
 // import 'moment/locale/en-gb';
-// import "@babel/polyfill";
+//import "@babel/polyfill";
+// import 'core-js';
 import "regenerator-runtime/runtime.js";
 require('es6-promise/auto');
 
